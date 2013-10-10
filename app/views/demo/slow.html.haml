@@ -1,0 +1,20 @@
+- object = {A:1,B:'test',C:{C1:'b',C2:Date.today}}
+=content_for(:first) do
+  %legend Test (#{link_to 'Back', root_path})
+=content_for(:second) do
+  %div
+    = render 'partial'
+=content_for(:third) do
+  %legend
+    C Slow
+  - for i in 1..150 do
+    - i = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    %span{'data-temp'=>i.to_json}
+      X
+=content_for(:fourth) do
+  %legend
+    D Slow
+  - for i in 1..150 do
+    - i = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    %span{'data-temp'=>i.to_json}
+      Y

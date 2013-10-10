@@ -1,4 +1,10 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
+
+  get "demo/slow"
+  get "demo/fast"
+
+  root to: 'demo#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

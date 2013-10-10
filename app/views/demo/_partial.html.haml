@@ -1,0 +1,7 @@
+%divhide{title: 'Form'}
+  =simple_form_for :screen, url: '/dummy', remote: true, :html => {:class => 'form-horizontal dialogform','data-type' => :json} do |f|
+    = f.input :name, as: :string, label: 'Name', required: false
+    = f.input :alternative, as: :boolean, label: false, :inline_label => 'Boolean'
+    = f.input :description, collection: ['A','B','C','D'], selected: 'A', label: 'Type', required: false
+    - coll = [ %w{A SampleA}, %w{B SampleB}, %w{C SampleC}, %w{D SampleD}, %w{E SampleE}, %w{F SampleF}]
+    = f.input :type, collection: coll, selected: 'A', label: 'Collection', required: false

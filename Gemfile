@@ -68,3 +68,4 @@ group :test do
   gem 'launchy'
 end
 
+gem "rubysl", "~> 2.0"
