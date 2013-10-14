@@ -11,4 +11,9 @@ class DemoController < ApplicationController
 
   end
 
+  def mail
+    TestMailer.test().deliver
+    render text: 'Mail Trying to send'
+  end
+
 end
