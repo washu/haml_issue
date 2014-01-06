@@ -68,4 +68,6 @@ group :test do
   gem 'launchy'
 end
 
-gem "rubysl", "~> 2.0"
+gem "rubysl", "2.0.15", platforms: :rbx
+gem 'iconv'
+gem 'racc'
